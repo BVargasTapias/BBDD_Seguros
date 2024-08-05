@@ -1,3 +1,7 @@
+-- Active: 1722900161521@@127.0.0.1@3306
+CREATE database BBDD_SEGUROS; 
+    DEFAULT CHARACTER SET = 'utf8mb4';
+
 USE BBDD_SEGUROS;
 
 CREATE TABLE Categoria_Automovil(
@@ -99,5 +103,3 @@ CREATE TABLE Categoria_Automovil(
         FK_Age_ID INT NOT NULL,
         FK_Ben_ID INT NOT NULL
     );
-
-    DROP DATABASE BBDD_SEGUROS;
