@@ -1,9 +1,6 @@
-CREATE DATABASE base_seguros
-    DEFAULT CHARACTER SET = 'utf8mb4';
+USE BBDD_SEGUROS;
 
-    USE base_seguros;
-
-    CREATE TABLE Categoria_Automovil(
+CREATE TABLE Categoria_Automovil(
         CaA_ID INT(5) AUTO_INCREMENT PRIMARY KEY,
         CaA_Nombre VARCHAR(20) 
     );
@@ -63,13 +60,6 @@ CREATE DATABASE base_seguros
         FK_Inm_ID INT NOT NULL
     );
 
-    CREATE TABLE Bienes_Inmueble(
-        RiA_ID INT(5) AUTO_INCREMENT PRIMARY KEY,
-        RiA_Nombre VARCHAR(20),
-        RiA_Valor VARCHAR(20),
-        FK_Inm_ID INT NOT NULL
-    );
-
     CREATE TABLE Seguro_Hogar(
         SeH_ID INT(5) AUTO_INCREMENT PRIMARY KEY,
         SeH_FechaContrato DATE,
@@ -109,3 +99,5 @@ CREATE DATABASE base_seguros
         FK_Age_ID INT NOT NULL,
         FK_Ben_ID INT NOT NULL
     );
+
+    DROP DATABASE BBDD_SEGUROS;
